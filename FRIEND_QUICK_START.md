@@ -1,50 +1,52 @@
 # AI Job Mission Control — Friend Quick Start
 
-## Easiest option: use the hosted app
+## Recommended option: build your own independent copy
+
+The earlier hosted proof-of-concept was not reliable enough to share. The safe path is now the `friend-starter` package in this repository.
 
 Open:
 
-**https://sriupanya.github.io/-ai-job-mission-control/**
+**https://github.com/sriupanya/-ai-job-mission-control/tree/main/friend-starter**
 
-You do **not** need to clone the repository or install anything for the hosted version.
+Then:
 
-### First-time setup
+1. Download or clone the repository.
+2. Open it in Claude Code, Codex, Cursor, or another coding agent.
+3. Open `friend-starter/BUILD_PROMPT.md`.
+4. Copy the entire prompt and give it to the coding agent.
+5. Let the agent build and test the app locally first.
+6. Use your own Supabase project and your own AI-provider key when prompted.
+7. Upload your own resume during onboarding.
+8. Do not deploy until the local smoke test and two-user privacy test pass.
 
-1. Open the hosted link in Chrome, Safari, Edge, or Firefox.
-2. Enter your own email address and request a sign-in link.
-3. Open the sign-in email in the same browser.
-4. Fill in your name, current role/headline, location, target job titles, target locations, and work-authorization/sponsorship preference.
-5. Upload your own resume as PDF or TXT.
-6. Review the facts extracted from your resume and confirm them before generating any tailored resume.
-7. Use **Alerts & Discover** to import a role, or use **+ Add Job** and paste a complete job description.
-8. Use **Assess fit** before tailoring. The job description is treated as requirements only; it is never treated as proof that you have those skills.
-9. Use **Tailor resume** to create a role-specific PDF.
-10. Use **Networking** to create a short LinkedIn connection note, then send it yourself in LinkedIn.
-11. Track the application status in Mission Control.
+## What your independent copy should include
 
-## Privacy
-
-Each signed-in user has a separate workspace. Jobs, resume sources, tailored resumes, contacts, application history, projects, and preferences are scoped to the authenticated user.
-
-## What the hosted version does today
-
-- Private resume-first onboarding
-- Job tracker and application statuses
-- Shared in-app job discovery catalog
+- Private sign-in and per-user workspace
+- Resume upload and resume-fact confirmation
+- Job tracker and application status history
+- Search preferences and alert rules
 - Resume-grounded fit assessment
-- Tailored one-page resume generation
+- Truthful tailored one-page resume generation
 - Resume library
 - Networking/contact tracker
 - LinkedIn connection-note drafting
 - Skill-gap project suggestions
-- Search and alert preferences
+- Shared/public job-catalog architecture that can later connect to a compliant external source
 
-## What is not automatic yet
+## Privacy
 
-- It does not log into LinkedIn or send LinkedIn messages automatically.
-- It does not continuously scrape external job boards.
-- Scheduled email job digests are a future phase; the current discovery feed is in-app.
+Your copy must not use Sri's Supabase project, user ID, database rows, storage, API keys, resume facts, job data, contacts, or application history.
 
-## If the hosted link ever fails
+## LinkedIn boundary
 
-The legacy Supabase share URL redirects to the GitHub Pages app. For a completely independent installation, use [`BUILD_YOUR_OWN_MISSION_CONTROL_PROMPT.md`](./BUILD_YOUR_OWN_MISSION_CONTROL_PROMPT.md). It is designed for Claude Code, Codex, Cursor, or a similar coding agent on a laptop and tells the agent to create an independent Supabase deployment rather than modifying another user's workspace.
+The app may draft messages and track outreach. It should not log into LinkedIn, scrape profiles at scale, or send messages automatically.
+
+## Files to use
+
+- `friend-starter/README.md`
+- `friend-starter/BUILD_PROMPT.md`
+- `friend-starter/SETUP_CHECKLIST.md`
+- `friend-starter/.env.example`
+- `friend-starter/supabase/schema.sql`
+
+The coding agent should verify the actual running app in a browser before calling it complete.
