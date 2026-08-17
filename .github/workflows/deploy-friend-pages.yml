@@ -45,4 +45,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-# Retriggered after GitHub Pages was enabled on 2026-08-17.
+# Retry after transient GitHub Actions package-download rate limit.
