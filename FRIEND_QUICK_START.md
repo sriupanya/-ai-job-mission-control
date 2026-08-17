@@ -4,7 +4,7 @@
 
 Open:
 
-**https://mqzibilzogyuxorjdkwq.supabase.co/functions/v1/mission-control-share**
+**https://sriupanya.github.io/-ai-job-mission-control/**
 
 You do **not** need to clone the repository or install anything for the hosted version.
 
@@ -47,4 +47,4 @@ Each signed-in user has a separate workspace. Jobs, resume sources, tailored res
 
 ## If the hosted link ever fails
 
-Use the independent-build prompt in [`BUILD_YOUR_OWN_MISSION_CONTROL_PROMPT.md`](./BUILD_YOUR_OWN_MISSION_CONTROL_PROMPT.md). It is designed for Claude Code, Codex, Cursor, or a similar coding agent on a laptop and tells the agent to create an independent Supabase deployment rather than modifying another user's workspace.
+The legacy Supabase share URL redirects to the GitHub Pages app. For a completely independent installation, use [`BUILD_YOUR_OWN_MISSION_CONTROL_PROMPT.md`](./BUILD_YOUR_OWN_MISSION_CONTROL_PROMPT.md). It is designed for Claude Code, Codex, Cursor, or a similar coding agent on a laptop and tells the agent to create an independent Supabase deployment rather than modifying another user's workspace.
